@@ -1,0 +1,31 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<div class="container">
+  <ul class="breadcrumb">
+    <li>
+      <a href="#/dsbStart">首页</a>
+    </li>
+    <li>详情</li>
+  </ul>
+
+  <!-- 详情信息-->
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2>{{book.name}}</h2>
+      <hr/>
+      <img class="img-responsive" ng-src="img/{{book.img_lg}}" alt=""/>
+      <p>{{book.intro}}</p>
+      <p>{{book.detail}}</p>
+      <p>{{book.price | currency:'￥'}}</p>
+    </div>
+    <div class="panel-footer">
+      <div class="text-right">
+        <button ng-click="jump('/dsbOrder/'+book.did)" class="btn btn-success">立即下单</button>
+        <button ng-click="jump('/dsbMain')" class="btn btn-primary">我再看看</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div ng-include="'tpl/include/footer.html'"></div>
