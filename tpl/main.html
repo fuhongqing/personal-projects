@@ -1,0 +1,42 @@
+<div ng-include="'tpl/include/header.html'">
+
+</div>
+
+<ion-content class="has-header has-footer">
+  <!-- 搜索框-->
+  <div class="list list-inset">
+    <div class="item item-input">
+      <input ng-model="inputTxt.kw" placeholder="请输入书名或作者" type="text"/>
+      <i class="icon ion-search"></i>
+    </div>
+  </div>
+  <!-- 缩略图列表-->
+  <div class="list list-inset">
+    <a href="#/dsbDetail/{{book.did}}" ng-repeat="book in bookList"
+       class="item item-text-wrap item-thumbnail-left">
+      <img ng-src="img/{{book.img_sm}}" alt=""/>
+
+      <h2>{{book.name}}</h2>
+      <p>{{book.intro}}</p>
+      <p>{{book.price | currency:'￥'}}</p>
+    </a>
+    <!--上拉加载更多-->
+    <ion-infinite-scroll
+      ng-if="hasMore"
+      on-infinite="loadMore()">
+
+    </ion-infinite-scroll>
+
+    <div class="card" ng-if="!hasMore">
+      <div class="item">
+        <p>没有更多数据了</p>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'">
+
+</div>
