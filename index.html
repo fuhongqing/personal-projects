@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="css/wy-03.css"/>
+</head>
+<body>
+<!--头部-->
+<header id="top">
+    <ul class="gt">
+        <li><a href="#">我的学习</a></li>
+        <li><a href="#">消息</a></li>
+        <li><a href="#">购物车</a></li>
+        <li><a href="#">登录/注册</a></li>
+        <li>
+            <a href="#" class="fa fa-user"></a>
+            <b></b>
+            <span></span>
+            <!-- 弹出框-->
+            <div class="pop">
+                <ul>
+                    <li class="first"><a href="#">游客，请登录...</a></li>
+                    <li><a href="#">私信</a></li>
+                    <li><a href="#">我的优惠券<span class="gt">兑换</span></a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">反馈意见</a></li>
+                    <li><a href="#">设置</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div id="mask">
+        <div id="login">
+            <span class="gt times">&times;</span>
+            <a href="#" class="active">手机号登录</a><a href="#" class="mail">网易邮箱登录</a>
+            <div class="tel">
+                <span class="fa fa-phone">+86</span>
+                <input type="tel" name="tel" placeholder="请输入手机号" id="tel"/>
+                <div class="gt info">
+                    13/14/15/17/18开头的11数字
+                </div>
+            </div>
+            <div class="pwd">
+                <span  class="fa fa-lock"></span>
+                <input type="password" name="pwd" placeholder="请输入密码" id="pwd"/>
+                <div class="gt info">
+                    6位数字
+                </div>
+            </div>
+                <input type="button" id="btn-login" value="登录"><br>
+            <div class="cbk">
+                <a href="#" class="gt reg">去注册</a>
+                <input type="checkbox" name="cbk" checked />十天内免登陆 | <a href="#">忘记密码？</a>
+            </div>
+        </div>
+        <div id="mail">
+            <span class="gt times">&times;</span>
+            <a href="#" class="tel">手机号登录</a><a href="#"  class="active">网易邮箱登录</a>
+            <div class="email">
+                <span class="fa fa-user"></span>
+                <input type="email" name="email" placeholder="邮箱账号" id="email"/>
+                <div class="gt info">
+                    请输入正确格式的邮箱账号
+                </div>
+                <!--/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/-->
+            </div>
+            <div class="pwd">
+                <span  class="fa fa-lock"></span>
+                <input type="password" name="epwd" placeholder="密码" id="epwd"/>
+                <div class="gt info">
+                    6位数字
+                </div>
+            </div>
+                <input type="button" value="登录" id="btn-e">
+            <div class="cbk">
+                <a href="#" class="gt reg">去注册</a>
+                <input type="checkbox" name="cbk" checked value="十天内免登陆"/> | <a href="#">忘记密码？</a>
+            </div>
+        </div>
+        <div id="reg">
+            <span class="times gt">&times;</span>
+            <h2>手机号注册</h2>
+            <div class="tel">
+                <span class="fa fa-phone"></span>
+                <input type="tel" name="rtel" placeholder="注册手机号" id="rtel"/>
+                <div class="gt info">
+                    13/14/15/17/18开头的11数字
+                </div>
+            </div>
+            <div class="num">
+                <span class="fa fa-phone"></span>
+                <input type="text" name="num" placeholder="验证码"/>
+                <input type="button" value="发送验证码">
+            </div>
+            <div class="pwd">
+                <span  class="fa fa-lock"></span>
+                <input type="password" name="rpwd" placeholder="设置密码" id="rpwd"/>
+                <div class="gt info">
+                    6位数字
+                </div>
+            </div>
+            <input type="button" class="finish" value="完成" id="btn-r">
+            <p><a href="#" class="login">&lt;手机号登录</a></p>
+        </div>
+    </div>
+    <a href="#"><img src="imgs/logo.png" alt="logo"/></a>
+</header>
+<!--导航-->
+<nav id="nav" class="clear">
+    <div class="total lf"><a href="#" class="fa fa-nav-icon"></a><a href="#">全部课程</a></div>
+    <ul class="lf nav-items">
+        <li><a href="#">微专业</a></li>
+        <li><a href="#">课程体系</a></li>
+        <li><a href="#">企业版</a></li>
+        <li><a href="#">下载APP</a></li>
+    </ul>
+    <div id="search" class="gt">课程
+        <b></b>
+        <input type="text" placeholder="搜索课程"/>
+        <button type="button" class="fa fa-search"></button>
+    </div>
+    <!--查询列表-->
+    <ul id="nav-total">
+        <li>
+            <a href="#">编程开发</a><a href="#">前端开发</a><a href="#">移动开发</a>
+            <div class="sub-box">
+                <ul class="sub-items lf">
+                    <li>
+                        <ul class="first">
+                            <li><a href="#">编程开发.精选好课</a></li>
+                            <li><a href="">数据科学家</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">工作效率 &nbsp;|</a></li>
+                            <li><a href="#">时间管理 |</a></li>
+                            <li><a href="#">思维导图</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">电脑基础 &nbsp;|</a></li>
+                            <li><a href="#">基础操作 |</a></li>
+                            <li><a href="#">常用工具</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sub-right gt">
+                    <li class="gt"><a href="#">&times;</a></li>
+                    <li><a href="#">系列课程</a></li>
+                    <li><a href="#">数据分析可视化</a></li>
+                    <li><a href="#">向《经济学人》学图表</a></li>
+                    <li><a href="#">轻松玩转Office软件</a></li>
+                    <li><a href="#">3门课精通数据可视化</a></li>
+                    <li><a href="#">用数据跟老板对话</a></li>
+                    <li><a href="#">Excel财务职场零基础进阶</a></li>
+                    <li><a href="#">更多&gt;&gt;</a></li>
+                    <li><a href="#"><img src="imgs/pj-04.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="#">办公效率</a><a href="#">PPT</a><a href="#">办公软件</a>
+            <div class="sub-box clear">
+                <ul class="sub-items lf">
+                    <li>
+                        <ul class="first">
+                            <li><a href="#">办公效率.精选好课</a></li>
+                            <li><a href="">数据分析师（Excel）</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">工作效率 &nbsp;|</a></li>
+                            <li><a href="#">时间管理 |</a></li>
+                            <li><a href="#">思维导图</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">电脑基础 &nbsp;|</a></li>
+                            <li><a href="#">基础操作 |</a></li>
+                            <li><a href="#">常用工具</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sub-right gt">
+                    <li class="gt"><a href="#">&times;</a></li>
+                    <li><a href="#">系列课程</a></li>
+                    <li><a href="#">数据分析可视化</a></li>
+                    <li><a href="#">向《经济学人》学图表</a></li>
+                    <li><a href="#">轻松玩转Office软件</a></li>
+                    <li><a href="#">3门课精通数据可视化</a></li>
+                    <li><a href="#">用数据跟老板对话</a></li>
+                    <li><a href="#">Excel财务职场零基础进阶</a></li>
+                    <li><a href="#">更多&gt;&gt;</a></li>
+                    <li><a href="#"><img src="imgs/pj-04.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="#">产品和设计</a><a href="#">PS</a><a href="#">产品经理</a>
+            <div class="sub-box clear">
+                <ul class="sub-items lf">
+                    <li>
+                        <ul class="first">
+                            <li><a href="#">产品和设计.精选好课</a></li>
+                            <li><a href="">高级商业设计师养成记</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">工作效率 &nbsp;|</a></li>
+                            <li><a href="#">时间管理 |</a></li>
+                            <li><a href="#">思维导图</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">电脑基础 &nbsp;|</a></li>
+                            <li><a href="#">基础操作 |</a></li>
+                            <li><a href="#">常用工具</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">工作效率 &nbsp;|</a></li>
+                            <li><a href="#">时间管理 |</a></li>
+                            <li><a href="#">思维导图</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sub-right gt">
+                    <li class="gt"><a href="#">&times;</a></li>
+                    <li><a href="#">系列课程</a></li>
+                    <li><a href="#">数据分析可视化</a></li>
+                    <li><a href="#">向《经济学人》学图表</a></li>
+                    <li><a href="#">轻松玩转Office软件</a></li>
+                    <li><a href="#">3门课精通数据可视化</a></li>
+                    <li><a href="#">用数据跟老板对话</a></li>
+                    <li><a href="#">Excel财务职场零基础进阶</a></li>
+                    <li><a href="#">更多&gt;&gt;</a></li>
+                    <li><a href="#"><img src="imgs/pj-04.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="#">生活方式</a><a href="#">摄影</a><a href="#">亲自</a>
+            <div class="sub-box clear">
+                <ul class="sub-items lf">
+                    <li>
+                        <ul class="first">
+                            <li><a href="#">生活方式.精选好课</a></li>
+                            <li><a href="">做一名独立音乐制作人</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">工作效率 &nbsp;|</a></li>
+                            <li><a href="#">时间管理 |</a></li>
+                            <li><a href="#">思维导图</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">电脑基础 &nbsp;|</a></li>
+                            <li><a href="#">基础操作 |</a></li>
+                            <li><a href="#">常用工具</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">工作效率 &nbsp;|</a></li>
+                            <li><a href="#">时间管理 |</a></li>
+                            <li><a href="#">思维导图</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">电脑基础 &nbsp;|</a></li>
+                            <li><a href="#">基础操作 |</a></li>
+                            <li><a href="#">常用工具</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sub-right gt">
+                    <li class="gt"><a href="#">&times;</a></li>
+                    <li><a href="#">系列课程</a></li>
+                    <li><a href="#">数据分析可视化</a></li>
+                    <li><a href="#">向《经济学人》学图表</a></li>
+                    <li><a href="#">轻松玩转Office软件</a></li>
+                    <li><a href="#">3门课精通数据可视化</a></li>
+                    <li><a href="#">用数据跟老板对话</a></li>
+                    <li><a href="#">Excel财务职场零基础进阶</a></li>
+                    <li><a href="#">更多&gt;&gt;</a></li>
+                    <li><a href="#"><img src="imgs/pj-04.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="#">职业发展</a><a href="#">个人提升</a><a href="#">求职</a>
+            <div class="sub-box clear">
+                <ul class="sub-items lf">
+                    <li>
+                        <ul class="first">
+                            <li><a href="#">职业发展.精选好课</a></li>
+                            <li><a href="">中欧锦囊课</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">工作效率 &nbsp;|</a></li>
+                            <li><a href="#">时间管理 |</a></li>
+                            <li><a href="#">思维导图</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">电脑基础 &nbsp;|</a></li>
+                            <li><a href="#">基础操作 |</a></li>
+                            <li><a href="#">常用工具</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sub-right gt">
+                    <li class="gt"><a href="#">&times;</a></li>
+                    <li><a href="#">系列课程</a></li>
+                    <li><a href="#">数据分析可视化</a></li>
+                    <li><a href="#">向《经济学人》学图表</a></li>
+                    <li><a href="#">轻松玩转Office软件</a></li>
+                    <li><a href="#">3门课精通数据可视化</a></li>
+                    <li><a href="#">用数据跟老板对话</a></li>
+                    <li><a href="#">Excel财务职场零基础进阶</a></li>
+                    <li><a href="#">更多&gt;&gt;</a></li>
+                    <li><a href="#"><img src="imgs/pj-04.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="#">市场营销</a><a href="#">网络营销</a><a href="#">推广</a>
+            <div class="sub-box clear">
+                <ul class="sub-items lf">
+                    <li>
+                        <ul class="first">
+                            <li><a href="#">市场营销.精选好课</a></li>
+                            <li><a href="">大客户销售</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">工作效率 &nbsp;|</a></li>
+                            <li><a href="#">时间管理 |</a></li>
+                            <li><a href="#">思维导图</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">电脑基础 &nbsp;|</a></li>
+                            <li><a href="#">基础操作 |</a></li>
+                            <li><a href="#">常用工具</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">办公软件 &nbsp;|</a></li>
+                            <li><a href="#">PPT |</a></li>
+                            <li><a href="#">Excel |</a></li>
+                            <li><a href="#">Word |</a></li>
+                            <li><a href="#">Outlook |</a></li>
+                            <li><a href="#">Keynote |</a></li>
+                            <li><a href="#">更多软件</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sub-right gt">
+                    <li class="gt"><a href="#">&times;</a></li>
+                    <li><a href="#">系列课程</a></li>
+                    <li><a href="#">数据分析可视化</a></li>
+                    <li><a href="#">向《经济学人》学图表</a></li>
+                    <li><a href="#">轻松玩转Office软件</a></li>
+                    <li><a href="#">3门课精通数据可视化</a></li>
+                    <li><a href="#">用数据跟老板对话</a></li>
+                    <li><a href="#">Excel财务职场零基础进阶</a></li>
+                    <li><a href="#">更多&gt;&gt;</a></li>
+                    <li><a href="#"><img src="imgs/pj-04.jpg" alt=""/></a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div id="tip">
+        <img src="imgs/pj-01.jpg" alt=""/>
+        <ul>
+            <li><a href="#">[新课]如何成为很厉害的女人</a></li>
+            <li><a href="#">年薪30w的设计师在做什么？</a></li>
+            <li><a href="#">小二推拿微专业：手"护"健康</a></li>
+            <li><a href="#">如何在职场中快速进步？</a></li>
+            <li><a href="#">[广告]进口好物低至9.9元包邮</a></li>
+        </ul>
+        <a href="#" class="now"><span class="fa fa-film"></span>看直播</a>
+        <a href="#"><span class="fa fa-edit"></span>做真题</a>
+    </div>
+</nav>
+<!--图片轮播-->
+<div id="banner">
+    <div class="active"><a href="#"><img src="imgs/banner-01.png" alt=""/></a></div>
+    <div><a href="#"><img src="imgs/banner-02.png" alt=""/></a></div>
+    <div><a href="#"><img src="imgs/banner-03.png" alt=""/></a></div>
+    <div><a href="#"><img src="imgs/banner-04.png" alt=""/></a></div>
+    <div><a href="#"><img src="imgs/banner-05.png" alt=""/></a></div>
+    <div><a href="#"><img src="imgs/banner-06.png" alt=""/></a></div>
+    <div><a href="#"><img src="imgs/banner-07.png" alt=""/></a></div>
+    <ul id="icons">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+    <!--<a href="#" class="previous">&lt;</a><a href="#" class="next">&gt;</a>-->
+</div>
+<section id="container">
+    <!--图片滚动-->
+    <div id="slider">
+        <a href="#" class="next">&gt;</a>
+        <a href="#" class="previous disabled">&lt;</a>
+        <ul class="clear">
+            <li>
+                <div class="gt">
+                    <p><a href="#">高级UI设计师</a></p>
+                    <p><a href="#">网易UEDC设计师亲授</a></p>
+                </div>
+                <img src="imgs/slider-01.jpg" alt=""/>
+            </li>
+            <li>
+                <div class="gt">
+                    <p><a href="#">用户研究员</a></p>
+                    <p><a href="#">网易&浙大老师带你"读心"</a></p>
+                </div>
+                <img src="imgs/slider-02.jpg" alt=""/>
+            </li>
+            <li>
+                <div class="gt">
+                    <p><a href="#">全栈新媒体运营</a></p>
+                    <p><a href="#">成为行业抢手的新媒体人</a></p>
+                </div>
+                <img src="imgs/slider-03.jpg" alt=""/>
+            </li>
+            <li>
+                <div class="gt">
+                    <p><a href="#">数据分析师</a></p>
+                    <p><a href="#">商业项目进阶数据分析</a></p>
+                </div>
+                <img src="imgs/slider-04.jpg" alt=""/>
+            </li>
+            <li>
+                <div class="gt">
+                    <p><a href="#">Unity游戏开发工程师</a></p>
+                    <p><a href="#">Unity游戏开发必修课</a></p>
+                </div>
+                <img src="imgs/slider-05.jpg" alt=""/>
+            </li>
+            <li>
+                <div class="gt">
+                    <p><a href="#">高级UI设计师</a></p>
+                    <p><a href="#">网易UEDC设计师亲授</a></p>
+                </div>
+                <img src="imgs/slider-01.jpg" alt=""/>
+            </li>
+            <li>
+                <div class="gt">
+                    <p><a href="#">用户研究员</a></p>
+                    <p><a href="#">网易&浙大老师带你"读心"</a></p>
+                </div>
+                <img src="imgs/slider-02.jpg" alt=""/>
+            </li>
+            <li>
+                <div class="gt">
+                    <p><a href="#">全栈新媒体运营</a></p>
+                    <p><a href="#">成为行业抢手的新媒体人</a></p>
+                </div>
+                <img src="imgs/slider-03.jpg" alt=""/>
+            </li>
+            <li>
+                <div class="gt">
+                    <p><a href="#">数据分析师</a></p>
+                    <p><a href="#">商业项目进阶数据分析</a></p>
+                </div>
+                <img src="imgs/slider-04.jpg" alt=""/>
+            </li>
+        </ul>
+    </div>
+    <!--免费课-->
+    <div id="free" class="clear">
+        <div class="lf">
+            <p class="fa fa-book"></p>
+            <h3>免费好课</h3>
+            <p>查看更多</p>
+        </div>
+        <dl>
+            <dt><img src="imgs/pj-05.jpg" alt=""/></dt>
+            <dd><a href="#">如何成为精要主义者</a></dd>
+            <dd><a href="#">学以思网络课堂</a></dd>
+        </dl>
+        <dl>
+            <dt><img src="imgs/pj-06.jpg" alt=""/></dt>
+            <dd><a href="#">跟王佩丰学Excel</a></dd>
+            <dd><a href="#">ExcelPPT王佩丰</a></dd>
+        </dl>
+        <dl>
+            <dt><img src="imgs/pj-25.jpg" alt=""/></dt>
+            <dd><a href="#">如何成为精要主义者</a></dd>
+            <dd><a href="#">学以思网络课堂</a></dd>
+        </dl>
+        <dl>
+            <dt><img src="imgs/pj-33.jpg" alt=""/></dt>
+            <dd><a href="#">跟王佩丰学Excel</a></dd>
+            <dd><a href="#">ExcelPPT王佩丰</a></dd>
+        </dl>
+    </div>
+    <!-- 返回顶部-->
+    <div id="back">
+        <ul>
+            <li>
+                <a href="#" class="front fa fa-msg"></a>
+                <a href="#" class="back fa fa-msg"></a>
+            </li>
+            <li>
+                <a href="#" class="front fa fa-phone"></a>
+                <a href="#" class="back">手机课堂</a>
+            </li>
+            <li>
+                <a href="#" class="front fa fa-level-up"></a>
+                <a href="" class="back">返回顶部</a>
+            </li>
+        </ul>
+    </div>
+    <!--滚动监听，楼层-->
+    <div class="affix" id="elevator">
+        <ul>
+            <li>
+                <a href="#" class="front">1F</a>
+                <a class="etitle" href="#">畅销好课</a>
+            </li>
+            <li>
+                <a href="#" class="front">2F</a>
+                <a class="etitle" href="#">名师大咖秀</a>
+            </li>
+            <li>
+                <a href="#" class="front">3F</a>
+                <a class="etitle" href="#">办公效率</a>
+            </li>
+            <li>
+                <a href="#" class="front">4F</a>
+                <a class="etitle" href="#">编程开发</a>
+            </li>
+            <li>
+                <a href="#" class="front">5F</a>
+                <a class="etitle" href="#">职业发展</a>
+            </li>
+            <li>
+                <a href="#" class="front">6F</a>
+                <a class="etitle" href="#">产品与设计</a>
+            </li>
+            <li>
+                <a href="#" class="front">7F</a>
+                <a class="etitle" href="#">生活方式</a>
+            </li>
+            <li>
+                <a href="#" class="front">8F</a>
+                <a class="etitle" href="#">市场营销</a>
+            </li>
+            <li>
+                <a href="#" class="front">9F</a>
+                <a class="etitle" href="#">实用语言</a>
+            </li>
+            <li>
+                <a href="#" class="front">10F</a>
+                <a class="etitle" href="#">亲子启蒙</a>
+            </li>
+        </ul>
+    </div>
+    <!--畅销好课-->
+    <div id="good">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">畅销好课</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">营销大咖成长系列课程</a></li>
+                <li><a href="#">iMindMap7从菜鸟到高手</a></li>
+                <li><a href="#">零基础小白的百日素描课</a></li>
+                <li><a href="#">职场人际沟通必备技能</a></li>
+            </ul>
+            <img src="imgs/pj-18.jpg" alt=""/>
+        </div>
+        <div class="lf first"><img src="imgs/pj-11.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-12.jpg" alt=""/></a></li>
+                    <li><a href="#">Axure RP7.0从入门到精通</a></li>
+                    <li><a href="#">小楼一夜听春雨</a></li>
+                    <li><a href="#">¥ 189.00</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-13.jpg" alt=""/></a></li>
+                    <li><a href="#">微信运营从低级到高级全攻略</a></li>
+                    <li><a href="#">唐三藏shifu</a></li>
+                    <li><a href="#">¥ 399.00</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-14.jpg" alt=""/></a></li>
+                    <li><a href="#">向《华尔街日报》学图标</a></li>
+                    <li><a href="#">刘万祥ExcelPro</a></li>
+                    <li><a href="#">¥ 300.00</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-15.jpg" alt=""/></a></li>
+                    <li><a href="#">无痛英语第一季</a></li>
+                    <li><a href="#">钟平老师</a></li>
+                    <li><a href="#">¥ 99.00</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-16.jpg" alt=""/></a></li>
+                    <li><a href="#">Meta分析简明教程</a></li>
+                    <li><a href="#">SCI刀笔吏</a></li>
+                    <li><a href="#">¥ 298.00</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-17.jpg" alt=""/></a></li>
+                    <li><a href="#">和大白一起学习PPT演讲</a></li>
+                    <li><a href="#">PPT演讲师大白</a></li>
+                    <li><a href="#">¥ 149.00</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--名师大咖秀-->
+    <div id="famous">
+        <div class="title">
+            <p class="gt"><a href="#">申请加入&gt;</a></p>
+            <h3><a href="#">名师大咖秀</a></h3>
+        </div>
+        <ul>
+            <li>
+                <a href="#"><img src="imgs/pj-130.jpg" alt=""/></a>
+                <p><a href="#"><b>蒋安庆</b>作曲家</a></p>
+            </li>
+            <li>
+                <a href="#"><img src="imgs/pj-131.jpg" alt=""/></a>
+                <p><a href="#"><b>秋叶</b>畅销书作者</a></p>
+            </li>
+            <li>
+                <a href="#"><img src="imgs/pj-133.jpg" alt=""/></a>
+                <p><a href="#"><b>李薇</b>AdobePhotoshop教育专家</a></p>
+            </li>
+            <li>
+                <a href="#"><img src="imgs/pj-134.jpg" alt=""/></a>
+                <p><a href="#"><b>张亮</b>从零开始做运营</a></p>
+            </li>
+            <li class="last">
+                <ul class="gt">
+                    <li>[机构]</li>
+                    <li>[机构]</li>
+                    <li>[机构]</li>
+                    <li>[机构]</li>
+                    <li>[机构]</li>
+                    <li>[机构]</li>
+                    <li>[机构]</li>
+                </ul>
+                <ul>
+                    <li><a href="#">多学多用</a></li>
+                    <li><a href="#">英盛网</a></li>
+                    <li><a href="#">达梦教育</a></li>
+                    <li><a href="#">上海职领网络</a></li>
+                    <li><a href="#">GeekBand</a></li>
+                    <li><a href="#">咔图摄影教育中心</a></li>
+                    <li><a href="#">HRBar专业人资培训</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--办公效率-->
+    <div id="office">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">办公效率</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">高大上的PPT设计秘籍</a></li>
+                <li><a href="#">30天完爆数据透视表</a></li>
+                <li><a href="#">Word实用小技巧集锦</a></li>
+                <li><a href="#">window10实用使用技巧</a></li>
+            </ul>
+            <img src="imgs/pj-28.jpg" alt=""/>
+        </div>
+        <div class="lf"><img src="imgs/pj-20.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-21.jpg" alt=""/></a></li>
+                    <li><a href="#">如何克服拖延症</a></li>
+                    <li><a href="#">变色龙课堂</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-22.jpg" alt=""/></a></li>
+                    <li><a href="#">和秋叶一起学PPT</a></li>
+                    <li><a href="#">幻方秋叶PPT</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-24.jpg" alt=""/></a></li>
+                    <li><a href="#">Excel商业图标修炼秘籍</a></li>
+                    <li><a href="#">蚂蚁职道</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-25.jpg" alt=""/></a></li>
+                    <li><a href="#">向咨询行业学图表</a></li>
+                    <li><a href="#">一图</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-26.jpg" alt=""/></a></li>
+                    <li><a href="#">秋叶教你马上搞定高颜值PPT</a></li>
+                    <li><a href="#">幻方秋叶PPT</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-27.jpg" alt=""/></a></li>
+                    <li><a href="#">Excel企业级十大组合函数</a></li>
+                    <li><a href="#">上海职领网络科技有限公司</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--编程开发-->
+    <div id="code">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">编程开发</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">和小蚊子学数据分析</a></li>
+                <li><a href="#">17门课精通数据挖掘与分析</a></li>
+                <li><a href="#">30分钟轻松制作HTML5</a></li>
+                <li><a href="#">真题|2016软考网络工程师</a></li>
+            </ul>
+            <img src="imgs/pj-28.jpg" alt=""/>
+        </div>
+        <div class="lf"><img src="imgs/pj-30.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-31.jpg" alt=""/></a></li>
+                    <li><a href="#">接口测试</a></li>
+                    <li><a href="#">网络杭州研究院</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-32.jpg" alt=""/></a></li>
+                    <li><a href="#">零基础学编程之C语言</a></li>
+                    <li><a href="#">老九学堂</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-33.jpg" alt=""/></a></li>
+                    <li><a href="#">Hadoop2.x</a></li>
+                    <li><a href="#">入门简介与生态圈</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-15.jpg" alt=""/></a></li>
+                    <li><a href="#">如何制作数据分析师简历</a></li>
+                    <li><a href="#">小蚊子数据分析</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-34.jpg" alt=""/></a></li>
+                    <li><a href="#">iOS逆向</a></li>
+                    <li><a href="#">刘培庆老师</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-35.jpg" alt=""/></a></li>
+                    <li><a href="#">ASP.NET网站工程师</a></li>
+                    <li><a href="#">喜课堂互联教育</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--职业发展-->
+    <div id="occupation">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">职业发展</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">改变职场命运的9门必修课</a></li>
+                <li><a href="#">实习生一定要知道的事</a></li>
+                <li><a href="#">吃出来的生意和机会</a></li>
+                <li><a href="#">三言两语轻松表达</a></li>
+            </ul>
+            <img src="imgs/pj-28.jpg" alt=""/>
+        </div>
+        <div class="lf"><img src="imgs/pj-40.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-41.jpg" alt=""/></a></li>
+                    <li><a href="#">克服演讲紧张"六脉神剑"</a></li>
+                    <li><a href="#">钱闯老师</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-42.jpg" alt=""/></a></li>
+                    <li><a href="#">跟着CEO制作完美简历</a></li>
+                    <li><a href="#">麦子学院</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-43.jpg" alt=""/></a></li>
+                    <li><a href="#">说英语不再磕磕巴巴</a></li>
+                    <li><a href="#">易口说英语</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-44.jpg" alt=""/></a></li>
+                    <li><a href="#">直线经理面试套路</a></li>
+                    <li><a href="#">徐中全</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-45.jpg" alt=""/></a></li>
+                    <li><a href="#">职场精英都在学的手账术</a></li>
+                    <li><a href="#">幻方秋叶PPT</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-46.jpg" alt=""/></a></li>
+                    <li><a href="#">手把手教你做霸气简历</a></li>
+                    <li><a href="#">实习问</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--产品与设计-->
+    <div id="product">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">产品和设计</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">用PS玩转UI图标设计</a></li>
+                <li><a href="#">PS冷门小技巧</a></li>
+                <li><a href="#">月薪过万的美工养成记</a></li>
+                <li><a href="#">零基础学会网页设计</a></li>
+            </ul>
+            <img src="imgs/pj-28.jpg" alt=""/>
+        </div>
+        <div class="lf"><img src="imgs/pj-50.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-41.jpg" alt=""/></a></li>
+                    <li><a href="#">SketchUp自学教程</a></li>
+                    <li><a href="#">设计软件通</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-51.jpg" alt=""/></a></li>
+                    <li><a href="#">零基础三天学会二维码艺术设计</a></li>
+                    <li><a href="#">一宏</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-52.jpg" alt=""/></a></li>
+                    <li><a href="#">有效提升转化率</a></li>
+                    <li><a href="#">运营控</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-44.jpg" alt=""/></a></li>
+                    <li><a href="#">PS教程超级合集</a></li>
+                    <li><a href="#">设计软件通</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-53.jpg" alt=""/></a></li>
+                    <li><a href="#">如何管理产品的版本和生命周期</a></li>
+                    <li><a href="#">三节课</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-54.jpg" alt=""/></a></li>
+                    <li><a href="#">Principle微交互设计</a></li>
+                    <li><a href="#">原型库</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--生活方式-->
+    <div id="life">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">生活方式</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">[畅销]跟简七系统学理财</a></li>
+                <li><a href="#">[免费]教你从零学游泳</a></li>
+                <li><a href="#">[免费]每天一个生活神技能</a></li>
+                <li><a href="#">[系列]谁说手机不能拍大片</a></li>
+            </ul>
+            <img src="imgs/pj-28.jpg" alt=""/>
+        </div>
+        <div class="lf"><img src="imgs/pj-60.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-61.jpg" alt=""/></a></li>
+                    <li><a href="#">snapseed手机摄影后期高手速成</a></li>
+                    <li><a href="#">光线摄影学院曾兰老师</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-62.jpg" alt=""/></a></li>
+                    <li><a href="#">自嗨少女</a></li>
+                    <li><a href="#">硬糖视频</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-63.jpg" alt=""/></a></li>
+                    <li><a href="#">Premiere CC剪辑大师全面进阶</a></li>
+                    <li><a href="#">Editing</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-64.jpg" alt=""/></a></li>
+                    <li><a href="#">方百里钢琴入门课：哈农练指法教程</a></li>
+                    <li><a href="#">哈琴帮</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-65.jpg" alt=""/></a></li>
+                    <li><a href="#">减肥必修课：减一次，瘦一辈子</a></li>
+                    <li><a href="#">Vincent的健康Idea</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-66.jpg" alt=""/></a></li>
+                    <li><a href="#">跟俊奎学毛笔楷书|田英章入室弟子</a></li>
+                    <li><a href="#">优贝可</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--市场营销-->
+    <div id="market">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">市场营销</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">微商涨粉实操</a></li>
+                <li><a href="#">四部了解QQ公众平台</a></li>
+                <li><a href="#">消费者心理破解</a></li>
+                <li><a href="#">百度竞价推广入门必修课</a></li>
+            </ul>
+            <img src="imgs/pj-28.jpg" alt=""/>
+        </div>
+        <div class="lf"><img src="imgs/pj-70.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-71.jpg" alt=""/></a></li>
+                    <li><a href="#">朱百宁 自传播</a></li>
+                    <li><a href="#">朱百宁自传播</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-72.jpg" alt=""/></a></li>
+                    <li><a href="#">屌丝推销逆袭攻略</a></li>
+                    <li><a href="#">俞炳呈</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-73.jpg" alt=""/></a></li>
+                    <li><a href="#">林杉-软文营销写作</a></li>
+                    <li><a href="#">杉杉03</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-74.jpg" alt=""/></a></li>
+                    <li><a href="#">销售就是搞定客户</a></li>
+                    <li><a href="#">枭咖学习进化机构</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-75.jpg" alt=""/></a></li>
+                    <li><a href="#">林杉-活动策划</a></li>
+                    <li><a href="#">杉杉03</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-76.jpg" alt=""/></a></li>
+                    <li><a href="#">攻心式销售特训</a></li>
+                    <li><a href="#">营销与团队教练郑时墨</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--实用语言-->
+    <div id="language">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">实用语言</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">科学牢记过万单词</a></li>
+                <li><a href="#">留学你必须知道的事</a></li>
+                <li><a href="#">[原版好片]看电影学英语</a></li>
+                <li><a href="#">英语零基础入门：音标</a></li>
+            </ul>
+            <img src="imgs/pj-28.jpg" alt=""/>
+        </div>
+        <div class="lf"><img src="imgs/pj-80.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-81.jpg" alt=""/></a></li>
+                    <li><a href="#">【直播】雅思官方大师课</a></li>
+                    <li><a href="#">易申网</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-82.jpg" alt=""/></a></li>
+                    <li><a href="#">和外教学意大利语发音</a></li>
+                    <li><a href="#">言多多</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-83.jpg" alt=""/></a></li>
+                    <li><a href="#">日语基础发音五十音图</a></li>
+                    <li><a href="#">朗阁在线</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-84.jpg" alt=""/></a></li>
+                    <li><a href="#">法语基础在线发音课</a></li>
+                    <li><a href="#">朗阁在线</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-85.jpg" alt=""/></a></li>
+                    <li><a href="#">无痛英语第一季</a></li>
+                    <li><a href="#">钟平老师</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-86.jpg" alt=""/></a></li>
+                    <li><a href="#">推广广东话（粤语）</a></li>
+                    <li><a href="#">拼东话Alex老师</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--亲子启蒙-->
+    <div id="child">
+        <div class="title">
+            <p class="gt"><a href="#">更多&gt;</a></p>
+            <h3><a href="#">亲子启蒙</a></h3>
+        </div>
+        <div class="gt last">
+            <ul>
+                <li class="first"><a href="#">[系列]医知袋鼠：孕妈成长记</a></li>
+                <li><a href="#">[体系]婴幼儿关键能力培养</a></li>
+                <li><a href="#">[免费]新手宝妈必备育儿宝典</a></li>
+                <li><a href="#">[体系]幼龄儿童基本能力培养</a></li>
+            </ul>
+            <img src="imgs/pj-28.jpg" alt=""/>
+        </div>
+        <div class="lf"><img src="imgs/pj-90.jpg" alt=""/></div>
+        <ul>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-91.jpg" alt=""/></a></li>
+                    <li><a href="#">0-1岁宝宝成长发育小课堂</a></li>
+                    <li><a href="#">孙瑞玲-仓鼠宝宝适时早教</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-92.jpg" alt=""/></a></li>
+                    <li><a href="#">玉米实验室：一点地质学</a></li>
+                    <li><a href="#">玉米实验室</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-93.jpg" alt=""/></a></li>
+                    <li><a href="#">一分钟童趣动物园</a></li>
+                    <li><a href="#">V说新语</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-94.jpg" alt=""/></a></li>
+                    <li><a href="#">宝宝入园：家长和孩子谁更焦虑</a></li>
+                    <li><a href="#">孙瑞玲-仓鼠宝宝适时早教</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-95.jpg" alt=""/></a></li>
+                    <li><a href="#">如何用绘本为孩子英语启蒙</a></li>
+                    <li><a href="#">孙瑞玲-仓鼠宝宝适时早教</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="imgs/pj-96.jpg" alt=""/></a></li>
+                    <li><a href="#">告别牛脾气！孩子坏脾气怎么改？</a></li>
+                    <li><a href="#">育儿大讲堂</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--ads-->
+    <div id="ads">
+        <a href="#"><img src="imgs/pj-101.jpg" alt="" class="gt"/></a>
+        <a href="#"><img src="imgs/pj-100.jpg" alt=""/></a>
+    </div>
+    <!--合作机构-->
+    <div id="coop">
+        <div class="title">
+            <p class="gt"><a href="#">申请加入&gt;</a></p>
+            <h3><a href="#">合作机构</a></h3>
+        </div>
+        <ul>
+            <li><a href="#">Sikana教育基金会</a></li>
+            <li><a href="#">图大狮</a></li>
+            <li><a href="#">HRBar专业人力资源培训</a></li>
+            <li><a href="#">Boolan</a></li>
+            <li><a href="#">咔图摄影教育中心</a></li>
+            <li><a href="#">上海职领网络教育有限公司</a></li>
+            <li><a href="#">百映学苑</a></li>
+            <li><a href="#">多学多用</a></li>
+            <li><a href="#">紫荆教育</a></li>
+            <li><a href="#">达梦教育</a></li>
+            <li><a href="#">英盛网</a></li>
+        </ul>
+    </div>
+</section>
+<footer id="foot" class="clear">
+    <div class="lf">
+        <p><a href="http://study.163.com">网易云课堂</a></p>
+        <p>
+            网易公司(163.com)旗下实用技能学习平台。与优秀讲师、专业机构、院校合作，为您提供海量优质课程，以及创新的在线学习体验，帮助您获得全新的个人发展和能力提升。
+        </p>
+        <p>1997-2017  网易公司 版权所有</p>
+    </div>
+    <div class="gt">
+        <ul>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">内容招募</a></li>
+            <li><a href="#">意见反馈</a></li>
+            <li><a href="#">企业服务</a></li>
+            <li><a href="#">中国大学TMOOC</a></li>
+        </ul>
+    </div>
+</footer>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/wy-03.js"></script>
+</body>
+</html>
