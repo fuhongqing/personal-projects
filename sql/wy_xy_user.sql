@@ -1,0 +1,10 @@
+CREATE TABLE wy_xy_user(
+  uid INT PRIMARY KEY AUTO_INCREMENT,
+  tel VARCHAR(20),
+  pwd VARCHAR(20)
+);
+INSERT INTO wy_xy_user VALUES(null,'18011111111','123456');
+INSERT INTO wy_xy_user VALUES(null,'18022222222','234567');
+INSERT INTO wy_xy_user VALUES(null,'18033333333','345678');
+##DESC wy_xy_user;
+##SELECT * FROM wy_xy_user;
